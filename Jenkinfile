@@ -36,6 +36,7 @@ pipeline
         {
             steps
             {
+		input message: 'Waiting for approval DM!', submitter: 'srinivas'
 		deploy adapters: [tomcat9(credentialsId: 'db991141-b788-42d9-b9dd-74810c1cf6ec', path: '', url: 'http://172.31.39.25:8080')], contextPath: 'finalapp', war: '**/*.war'
             }
         }
