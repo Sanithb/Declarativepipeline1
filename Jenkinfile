@@ -36,6 +36,7 @@ pipeline
         {
             steps
             {
+	        input message: 'Waiting for approval from DM!', submitter: 'srinivas'
 		sh 'scp /var/lib/jenkins/workspace/DeclarativePipeline/webapp/target/webapp.war ubuntu@172.31.39.25:/var/lib/tomcat9/webapps/Prodapp.war'
     	    }
         }
